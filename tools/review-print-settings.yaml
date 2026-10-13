@@ -1,0 +1,12 @@
+name: review-print-settings
+description: Check supplied print settings for malformed values and broad review flags.
+input_schema:
+  type: object
+  additionalProperties: false
+  required: [settings]
+  properties:
+    settings:
+      type: object
+      additionalProperties: true
+    material:
+      type: string

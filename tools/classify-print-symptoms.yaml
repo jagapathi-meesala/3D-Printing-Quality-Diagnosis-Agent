@@ -1,0 +1,12 @@
+name: classify-print-symptoms
+description: Map reported 3D-print symptoms to plausible causes and low-risk checks.
+input_schema:
+  type: object
+  additionalProperties: false
+  required: [symptoms]
+  properties:
+    symptoms:
+      type: array
+      minItems: 1
+      items:
+        type: string

@@ -1,0 +1,10 @@
+name: build-diagnosis-report
+description: Combine symptoms and supplied settings into a cautious structured diagnosis report.
+input_schema:
+  type: object
+  additionalProperties: false
+  required: [case]
+  properties:
+    case:
+      type: object
+      additionalProperties: true
