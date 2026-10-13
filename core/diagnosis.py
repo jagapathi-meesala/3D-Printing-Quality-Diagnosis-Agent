@@ -107,7 +107,7 @@ def build_diagnosis_report(case: Any) -> dict[str, Any]:
         if not case.get(field) and not (field == "nozzle_diameter_mm" and case.get("settings", {}).get(field) if isinstance(case.get("settings", {}), dict) else False):
             missing.append(field)
     return {
-        "agent": "3d-printing-quality-diagnosis-agent",
+        "agent": "three-d-printing-quality-diagnosis-agent",
         "valid": not errors,
         "status": "invalid_input" if errors else ("preliminary_review" if missing or findings else "no_flags"),
         "context": {"printer_model": case.get("printer_model"), "material": case.get("material")},

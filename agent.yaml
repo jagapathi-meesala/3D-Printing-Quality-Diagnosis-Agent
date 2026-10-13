@@ -1,23 +1,24 @@
-spec_version: "0.1.0"
-name: 3d-printing-quality-diagnosis-agent
-version: "1.0.0"
-description: Diagnoses likely 3D-print quality issues from user-reported symptoms and print settings, with evidence-linked checks and cautious recommendations.
+spec_version: 0.1.0
+name: three-d-printing-quality-diagnosis-agent
+version: 1.0.0
+description: Diagnoses likely 3D-print quality issues from user-reported symptoms
+  and print settings, with evidence-linked checks and cautious recommendations.
 author: jagapathi-meesala
 license: MIT
 skills:
-  - print-symptom-triage
-  - slicer-setting-review
-  - diagnosis-reporting
+- print-symptom-triage
+- slicer-setting-review
+- diagnosis-reporting
 tools:
-  - classify-print-symptoms
-  - review-print-settings
-  - build-diagnosis-report
+- classify-print-symptoms
+- review-print-settings
+- build-diagnosis-report
 runtime:
   max_turns: 5
   temperature: 0.2
   timeout: 30
 tags:
-  - 3d-printing
-  - additive-manufacturing
-  - quality-control
-  - troubleshooting
+- 3d-printing
+- additive-manufacturing
+- quality-control
+- troubleshooting

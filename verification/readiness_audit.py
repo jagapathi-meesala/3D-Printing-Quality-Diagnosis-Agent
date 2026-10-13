@@ -11,6 +11,7 @@ if missing:
     print("FAIL: missing files:", missing); raise SystemExit(1)
 manifest = yaml.safe_load((ROOT/"agent.yaml").read_text())
 assert manifest["spec_version"] == "0.1.0"
+assert re.fullmatch(r"[a-z][a-z0-9-]*", manifest["name"])
 assert len(manifest["tools"]) == 3 and len(manifest["skills"]) == 3
 assert all(re.fullmatch(r"[a-z][a-z0-9-]*", name) for name in manifest["tools"])
 for p in (ROOT/"tools").glob("*.yaml"):
